@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import Personagem from "./components/Personagem";
+import SeletorPersonagem from "./components/SeletorPersonagem";
+import Header from "./components/Header";
+
+const estado_inicial = {
+  name: "",
+  birth_year: "",
+  gender: "",
+  mass: "",
+  height: "",
+  eye_color: "",
+  hair_color: "",
+};
 
 function App() {
+  // useState
+
+  // useEffect para alterar título
+
+  // useEffect para alterar personagem
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <SeletorPersonagem valor={0} onChange={() => {}} />
+      <Personagem
+        nome={"?"}
+        nascimento={"?"}
+        genero={"?"}
+        peso={"?"}
+        altura={"?"}
+        corOlhos={"?"}
+        corCabelo={"?"}
+      />
     </div>
   );
 }
